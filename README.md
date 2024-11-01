@@ -2,7 +2,7 @@
 
 ## Overview:
 
-This is a simple Laravel-based Task Manager application that enables users to create, view, edit, and delete tasks. The main goal of the project is to demonstrate backend logic integration, form validation, and frontend development with Laravel and Bootstrap 4. The application has an intuitive UI with features to manage tasks efficiently.
+This is a simple Laravel-based Task Manager application that enables users to create, view, edit, and delete tasks and filter tasks by title or status using a search feature. The main goal of the project is to demonstrate backend logic integration, form validation, and frontend development with Laravel and Bootstrap 4. The application has an intuitive UI with features to manage tasks efficiently.
 
 ## Approach:
 
@@ -63,6 +63,8 @@ This is a simple Laravel-based Task Manager application that enables users to cr
 ## Bonus Feature Implementation:
 
 1. Implemented Pagination for displaying the Tasks. 
+2. Implemented Search Bar that filter tasks by title or status.
+
 
 
 
