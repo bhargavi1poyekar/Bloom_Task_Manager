@@ -6,6 +6,13 @@
         <a class="btn btn-success" href="{{ route('tasks.create') }}">Add Task</a>
     </div>
 
+    <!-- Search form -->
+    <form action="{{ route('tasks.index') }}" method="GET" class="form-inline mt-3 mb-3">
+        <input type="text" name="search" class="form-control mr-2" placeholder="Search by title or status"
+               value="{{ request()->input('search') }}">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    
     <table class="table mt-4">
         <thead>
             <tr>

@@ -10,9 +10,20 @@ class TaskController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tasks = Task::paginate(10);
+        $query = Task::query();
+
+        // Check if there is a search input
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            $query->where('title', 'like', '%' . $search . '%')
+                ->orWhere('status', 'like', '%' . $search . '%');
+        }
+
+        // Get the paginated tasks based on the query
+        $tasks = $query->paginate(10);
+
         return view('tasks.index', compact('tasks'));
 
     }
